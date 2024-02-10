@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: heezzyami/test1
+        image: heezzyami/test1:latest
         ports:
         - containerPort: 80

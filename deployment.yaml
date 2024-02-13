@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: forargo.azurecr.io/helloworld:1.0
+        image: forargo.azurecr.io/helloworld:2.0
         ports:
         - containerPort: 80

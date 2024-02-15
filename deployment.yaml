@@ -36,6 +36,6 @@ spec:
     spec:
       containers:
       - name: helloworld2
-        image: forargo.azurecr.io/helloworld2:1.0
+        image: forargo.azurecr.io/helloworld2:2.0
         ports:
         - containerPort: 3080

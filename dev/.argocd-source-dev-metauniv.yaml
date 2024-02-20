@@ -1,0 +1,4 @@
+kustomize:
+  images:
+  - forargo.azurecr.io/web-front-server:v7
+  - forargo.azurecr.io/web-back-server:v4

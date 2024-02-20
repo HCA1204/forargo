@@ -1,24 +1,24 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx-svc
+  name: dev-metauniv-front-svc
   labels:
-    app: nginx
+    app: dev-metauniv-front
 spec:
   ports:
   - port: 80
     protocol: TCP
   selector:
-    app: nginx
+    app: dev-metauniv-front
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: helloworld2-svc
+  name: dev-metauniv-back-svc
   labels:
-    app: helloworld2
+    app: dev-metauniv-back
 spec:
   ports:
     - port: 3080
   selector:
-    app: helloworld2
+    app: dev-metauniv-back

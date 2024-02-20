@@ -1,41 +1,41 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: prod-metauniv-front-deployment
 spec:
   revisionHistoryLimit: 0
   selector:
     matchLabels:
-      app: nginx
+      app: prod-metauniv-front
   replicas: 4
   template:
     metadata:
       labels:
-        app: nginx
+        app: prod-metauniv-front
     spec:
       containers:
-      - name: nginx
-        image: forargo.azurecr.io/helloworld-prod:1.0
+      - name: prod-metauniv-front
+        image: forargo.azurecr.io/web-front-server:v3
         ports:
         - containerPort: 80
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: helloworld2-deployment
+  name: prod-metauniv-back-deployment
 spec:
   revisionHistoryLimit: 0
   selector:
     matchLabels:
-      app: helloworld2
+      app: prod-metauniv-back
   replicas: 4
   template:
     metadata:
       labels:
-        app: helloworld2
+        app: prod-metauniv-back
     spec:
       containers:
-      - name: helloworld2
-        image: forargo.azurecr.io/helloworld2-prod:1.0
+      - name: prod-metauniv-back
+        image: forargo.azurecr.io/web-back-server:v3
         ports:
         - containerPort: 3080

@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: dev-metauniv-front
-        image: forargo.azurecr.io/dev-webserver-front:v113
+        image: forargo.azurecr.io/web-front-server:v3
         ports:
         - containerPort: 80
 ---
@@ -36,6 +36,6 @@ spec:
     spec:
       containers:
       - name: dev-metauniv-back
-        image: forargo.azurecr.io/dev-webserver-back:v113
+        image: forargo.azurecr.io/web-back-server:v3
         ports:
         - containerPort: 3080
